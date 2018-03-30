@@ -1,0 +1,13 @@
+<div *ngIf="album$ | async as a">
+  <p>Album : {{a.name}} </p>
+  <p>Popularity : {{a.popularity}}</p>
+
+
+  <div *ngFor="let i of a.images">
+    <img src="{{i.url}}" class="img-responsive">
+  </div>
+
+  <div *ngFor="let j of a.tracks.items">
+    <a [routerLink]="['/track',j.id]" routerLinkActive="active"><p>track : {{j.name}}</p></a>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Artist</h1>
+
+<div *ngIf="artist$ | async as a">
+  <p>Artiste : {{a.name}}</p>
+  <div *ngFor="let i of a.images">
+    <img src="{{i.url}}" class="img-responsive">
+  </div>
+</div>

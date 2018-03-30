@@ -1,0 +1,8 @@
+<h1>
+  Track
+</h1>
+
+<div *ngIf="track$ | async as t">
+  <p>{{t.name}} : {{t.duration_ms}}ms</p>
+  <audio controls src="{{ t.preview_url }}"></audio>
+</div>
